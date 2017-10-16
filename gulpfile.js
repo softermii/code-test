@@ -39,7 +39,7 @@ var templateData = JSON.parse(fs.readFileSync('./variables.js'));
 //////////////////////////////////////////////////////////////////////
 
 //// Export assets from sketch file
-gulp.task('sketch', run('sketchtool export slices --compact=YES --save-for-web=YES sketch/static-starter-v2.sketch --output=client/img'))
+gulp.task('sketch', run('sketchtool export slices --compact=YES --save-for-web=YES sketch/code-test.sketch --output=client/img'))
 
 
 //////////////////////////////////////////////////////////////////////
