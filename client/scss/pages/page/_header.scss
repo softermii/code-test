@@ -1,0 +1,25 @@
+.header {
+	padding: 20px 0; 
+
+	&__nav {
+		li + li {
+			margin-left: 30px;
+		}
+		a {
+			font-size: 18px;
+			line-height: 50px; 
+			color: $darkgrey;
+		}
+		li.active {
+			a {
+				display: block;
+				background: $primary;
+				color: #fff;
+				font-size: 16px;
+				line-height: 50px; 
+				padding: 0 32px; 
+				border-radius: 6px;
+			} 
+		}
+	} 
+}

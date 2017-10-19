@@ -2,5 +2,104 @@
 // Home Page: /                                        //
 /////////////////////////////////////////////////////////
 
-// Overides for home page here
-.home {}
+// intro
+.home-intro { 
+	padding-top: 80px; 
+
+	.main-img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+} 
+
+// redline
+.home-redline {
+	background: $primary;
+	padding: 40px 0;
+	color: #fff;
+
+	.text-box {
+		font-size: 28px;
+		font-weight: 500;
+		line-height: 1.5;
+		padding-right: 30px;
+	}
+}
+
+// services
+.home-services {
+	padding: 100px 0;
+
+	.item {
+		text-align: center;
+
+		img {
+			display: block;
+			margin: 0 auto 10px;
+			width: 150px;
+			height: 150px;
+		}
+
+		.title {
+			font-size: 28px;
+		  	font-weight: 500;
+		  	line-height: 1.5;
+		  	color: $darkgrey;
+		}
+
+		.desc {
+			font-size: 20px;
+  			font-weight: 300;
+  			line-height: 1.5; 
+		}
+	}
+}
+
+// blockquote
+.home-blockquote {
+	.outer {
+		border-top: 2px solid #eee;
+		border-bottom: 2px solid #eee;
+		padding: 60px 0;
+	}
+	.inner {
+		position: relative;
+		padding-left: 186px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 50px;
+			height: 33px;
+			position: absolute;
+			top: 5px;
+			left: 90px;
+			background: url(../img/homepage/speach-marks.svg) no-repeat center center;
+		}
+	}
+
+	.text {
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 0 0 20px;
+		color: $darkgrey;
+	}
+
+	.from {
+		font-size: 18px;
+  		line-height: 1.67;
+	}
+}
+
+// contact
+.home-contact {
+	padding: 100px 0;
+
+	form {
+		width: 580px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}

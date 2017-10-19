@@ -4,11 +4,11 @@
 
 // SETUP
 //// Base
-$primary: #4A90E2!default;
-$secondary: #0E1C2D!default;
+$primary: #f56a75!default;
+$secondary: #0e3757!default;
 $black: #000000!default;
-$darkgrey: #9B9B9B!default;
-$lightgrey: #EEEEEE!default;
+$darkgrey: #0e3757!default;
+$lightgrey: #8d9ca8!default;
 $white: #FFFFFF!default;
 //// States
 $error: #D0021B!default;
@@ -25,9 +25,9 @@ $slack: #E9A820!default;
 $youtube: #CD201F!default;
 $dribbble: #EA4C89!default;
 //// Defaults
-$bodycolor: $secondary!default;
-$headingcolor: $secondary!default;
-$line: #D8D8D8!default;
+$bodycolor: $lightgrey!default;
+$headingcolor: $darkgrey!default;
+$line: #dadada!default;
 //// Into an array
 $colors: (
 	primary: $primary,
@@ -50,8 +50,8 @@ $colors: (
 	dribbble: $dribbble,
 	bodycolor: $bodycolor,
 	headingcolor: $headingcolor
-) !default;
-
+) !default; 
+ 
 
 // Color Helpers
 //// Links
