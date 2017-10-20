@@ -5,6 +5,33 @@
     <!-- build:js /assets/js/main.js  defer-->
     <script type="text/javascript" src="/js/main.js"  defer></script>
     <!-- endbuild -->
+
+    <!-- menu actions -->
+    <script>
+        $('#nav-button').click(function(event) {
+            $(this).toggleClass('active');
+
+            if($(this).hasClass('active')) {
+
+                // open nav
+                $('body').css({
+                    'position': 'relative',
+                    'overflow': 'hidden'
+                });
+                $('body').animate({left: '-258px'}, 400);
+                $('#mobile-nav').animate({right: 0}, 400);
+
+            } else {
+
+                // close nav
+                $('body').css({
+                    'overflow': 'visible'
+                });
+                $('body').animate({left: '0'},400);
+                $('#mobile-nav').animate({right: '-258px'}, 400);
+            }
+        });
+    </script>
     
     <!-- @if NODE_ENV='prod' -->
     <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
