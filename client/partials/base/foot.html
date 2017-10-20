@@ -1,38 +1,14 @@
     <!-- build:js /assets/js/vendor.js  defer-->
-    <script type="text/javascript" src="/vendor/jquery/dist/jquery.min.js"  defer></script>
+    <script type="text/javascript" src="/vendor/jquery/dist/jquery.min.js" defer></script>
+    <script type="text/javascript" src="/vendor/jquery-validation/dist/jquery.validate.min.js" defer></script>
     <!-- endbuild -->
-    
+
     <!-- build:js /assets/js/main.js  defer-->
-    <script type="text/javascript" src="/js/main.js"  defer></script>
+    <script type="text/javascript" src="/js/main.js" defer></script>
+    <script type="text/javascript" src="/js/mobileNav.js" defer></script>
+    <script type="text/javascript" src="/js/contactFormHandler.js" defer></script>
     <!-- endbuild -->
 
-    <!-- menu actions -->
-    <script>
-        $('#nav-button').click(function(event) {
-            $(this).toggleClass('active');
-
-            if($(this).hasClass('active')) {
-
-                // open nav
-                $('body').css({
-                    'position': 'relative',
-                    'overflow': 'hidden'
-                });
-                $('body').animate({left: '-258px'}, 400);
-                $('#mobile-nav').animate({right: 0}, 400);
-
-            } else {
-
-                // close nav
-                $('body').css({
-                    'overflow': 'visible'
-                });
-                $('body').animate({left: '0'},400);
-                $('#mobile-nav').animate({right: '-258px'}, 400);
-            }
-        });
-    </script>
-    
     <!-- @if NODE_ENV='prod' -->
     <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
     <script>
@@ -40,6 +16,6 @@
     galite.UA = 'UA-XXXXXX'; // Insert your tracking code here
     </script>
     <!-- @endif -->
-    
+
   </body>
 </html>
