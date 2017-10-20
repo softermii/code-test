@@ -2,10 +2,13 @@
 // Page level overides                                 //
 /////////////////////////////////////////////////////////
 
-// Header
-@import '../pages/page/_header.scss';  
+// header
+@import 'pages/page/header';
+
+// footer
+@import 'pages/page/footer'; 
 
 /////////////////////////////////////////////////////////
 
 // Home
-@import '../pages/page/_home.scss'; 
+@import 'pages/page/home'; 
