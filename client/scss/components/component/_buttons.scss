@@ -24,11 +24,11 @@ $btn-padding:(($btn-max-height / 2) - ($btn-line-height / 2)) ($btn-line-height 
 //// Base Button color
 $btn-font-color: white!default;
 $btn-bgcolor: $secondary!default;
-//// Button color variations 
+//// Button color variations
 //// Name: (Background,Font,Border)
 $buttons: (
-	primary: ($primary, $white, $primary),
-	secondary: ($secondary, $white, $secondary),
+	primary: ($secondary, $white, $secondary),
+	secondary: ($primary, $white, $primary),
 	black: ($black,$white,$black),
 	darkgrey: ($darkgrey,$white,$darkgrey),
 	lightgrey: ($lightgrey,$black,$lightgrey),

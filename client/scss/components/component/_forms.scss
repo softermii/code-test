@@ -4,7 +4,7 @@
 
 // Setup
 //// Label Group
-$form-input-group-margin: 0 0 30px 0!default;
+$form-input-group-margin: 0 0 20px 0!default;
 $form-font-family: $bfont!default;
 $form-font-size: 16px!default;
 $form-font-color: $headingcolor!default;
@@ -69,9 +69,9 @@ $form-state-warning: $warning!default;
 $form-state-valid: $success!default;
 $form-state-message-font-size: 14px!default;
 $form-state-message-font-line-height:24px!default;
-$form-state-message-margin: 4px 0 0 0!default;
+$form-state-message-margin: 5px 0 0 0!default;
 //// Helper text
-$form-helper-text-color:$lightgrey!default;
+$form-helper-text-color:$darkgrey!default;
 //// Range Slider
 $form-input-range-track-color: $lightgrey!default;
 $form-input-range-thumb-color: $primary!default;
@@ -86,7 +86,6 @@ $form-input-range-track-border-width: 0px!default;
 $form-input-range-track-border-color: $lightgrey!default;
 $form-input-range-track-radius: 0px!default;
 $form-input-range-contrast: 0%!default;
-
 //// Reusable code
 @mixin track {
 	cursor: pointer;
@@ -132,7 +131,6 @@ label {
 	line-height: $form-state-message-font-line-height;
 	margin:$form-state-message-margin;
 	display: block;
-	color: $lightgrey;
 	&.error {color: $form-state-error;}
 	&.warning {color: $form-state-warning;}
 	&.valid {color: $form-state-valid;}
@@ -163,7 +161,6 @@ input[list],
 input[type="file"],
 select,
 textarea {
-	font-weight: 300;
 	width: $form-input-width;
 	padding: $form-input-padding;
 	background-color: $form-input-bg-color;
@@ -189,8 +186,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[list],
-textarea {
+input[list] {
     height: $form-input-height;
     -webkit-appearance: none;
     &:required {
@@ -206,16 +202,6 @@ textarea {
     &.valid {
 	    background: $form-input-bg-color;
 	    border: $form-border-width $form-border-style $form-state-valid;
-    }
-}
-textarea {
-	&:required {
-	    background: $form-input-bg-color url($form-input-required-icon) no-repeat right 14px top 16px;
-	    background-size:8px;
-    }
-    &.error {
-	    background: $form-input-bg-color url($form-input-error-icon) no-repeat right 14px top 16px;
-	    background-size:16px 14px;
     }
 }
 
@@ -484,4 +470,9 @@ input[type='range'] {
 		@include thumb;
 		margin-top: 0;
 	}
-} 
+}
+
+// form-group
+.form-group {
+	margin: 0 0 30px;
+}
