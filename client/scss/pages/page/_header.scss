@@ -38,8 +38,10 @@
 }
 
 // nav-button
-#nav-button {
-	display: none;
+@media screen and (min-width:$desktopmq) {
+	#nav-button, #mobile-nav {
+		display: none;
+	}
 }
 @media screen and (max-width:$desktopmq - 1) {
 	#nav-button {
@@ -48,10 +50,39 @@
 		height: 32px;
 		background: url(../img/menu/menu-open.svg) no-repeat center center;
 		background-size: 32px;
+		cursor: pointer;
 
 		&.active {
 			background: url(../img/menu/menu-close.svg) no-repeat center center;
 			background-size: 32px;
+		}
+	}
+	#mobile-nav {
+		position: fixed;
+		top: 0;
+		right: -258px;
+		bottom: 0;
+		z-index: 1;
+
+		padding: 30px;
+		width: 258px;
+		background: $secondary;
+
+		li {
+			a {
+				font-size: 18px;
+				line-height: 50px;
+				color: #fff;
+				display: block;
+				text-align: center;
+				border-radius: 6px;
+			}
+		}
+
+		li.active {
+			a {
+				background: $primary;
+			}
 		}
 	}
 }
