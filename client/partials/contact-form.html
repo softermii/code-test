@@ -7,19 +7,23 @@
 		<form action="" method="">
 			<div class="input-group">
 				<label>Your name</label>
-				<input type="text" placeholder="Please enter your name" name="username">
+				<input type="text" placeholder="Please enter your name" name="username" required>
+				<div class="helper-message"></div>
 			</div>
 			<div class="input-group">
 				<label>Your Telephone Number</label>
-				<input type="text" placeholder="Please enter your phone" name="phone">
+				<input type="text" placeholder="Please enter your phone" name="phone" required>
+				<div class="helper-message"></div>
 			</div>
 			<div class="input-group">
-				<label>Your Telephone Email</label>
-				<input type="email" name="email" placeholder="Please enter your email" >
+				<label>Your Email</label>
+				<input type="email" name="email" placeholder="Please enter your email" required>
+				<div class="helper-message"></div>
 			</div>
 			<div class="input-group">
 				<label>Your Message</label>
-				<textarea name="message" placeholder="Your message"></textarea>
+				<textarea name="message" placeholder="Your message" required></textarea>
+				<div class="helper-message"></div>
 			</div>
 			<div class="text-right">
 				<button type="submit" class="btn btn-secondary">Submit</button>

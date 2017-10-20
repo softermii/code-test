@@ -1,5 +1,9 @@
 (function(){
 
+	$.validator.addMethod("phoneValidation", function (value, element, param) {
+		let regex = /^([+][0-9]{10,14})$/;
+		return regex.test(value);
+	}, "Phone number not valid");
 
 
 	$('.contact-form form').validate({
@@ -13,7 +17,8 @@
 				required: true,
 			},
 			phone: {
-				required: true
+				required: true,
+				phoneValidation: true
 			},
 			message: {
 				required: true
@@ -27,7 +32,10 @@
 			message: "Please enter as much detail as possible"
 		},
 		errorElement: 'div',
-		submitHandler: onFormSubmit
+		submitHandler: onFormSubmit,
+		highlight: function(element, errorClass, validClass) {
+			$(element).addClass('error').removeClass('valid');
+		},
 	});
 
 	function onFormSubmit(form, event) {
