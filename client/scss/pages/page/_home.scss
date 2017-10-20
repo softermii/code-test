@@ -4,7 +4,7 @@
 
 // intro
 .home-intro { 
-	padding-top: 80px; 
+	padding-top: 20px; 
 
 	.main-img {
 		display: block;
@@ -12,46 +12,47 @@
 		max-width: 100%;
 	}
 } 
-@media screen and (max-width:$lgdesktopmq - 1) {
+@media screen and (min-width: $lgdesktopmq) {
 	.home-intro {
-		padding-top: 20px;
+		padding-top: 80px;
 	}
 }
 
-// redline
-.home-redline {
+// call-to-action
+.home-call-to-action {
 	background: $primary;
-	padding: 40px 0;
+	padding: 30px 0;
 	color: #fff;
+	text-align: center;
 
 	.text-box {
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: 500;
 		line-height: 1.5;
-		padding-right: 30px;
+		margin: 0 0 20px;
 	}
 
 	.btn {
-		flex-shrink: 0; 
+		flex-shrink: 0;
+		width: 100%;
 	}
 }
-@media screen and (max-width:$lgdesktopmq - 1) {
-	.home-redline {
-		text-align: center;
-		padding: 30px 0;
-
-		.text-box {
-			font-size: 24px;
-			margin: 0 0 20px;
-			width: 100%;
-			padding-right: 0;
+@media screen and (min-width: $tabletmq) {
+	.home-call-to-action {
+		.btn {
+			width: auto;
 		}
 	}
 }
-@media screen and (max-width:$tabletmq - 1) {
-	.home-redline {
-		.btn {
+@media screen and (min-width: $desktopmq) {
+	.home-call-to-action {
+		text-align: left;
+		padding: 40px 0;
+		.text-box {
+			font-size: 28px;
+			margin: 0;
 			width: 100%;
+			padding-right: 30px;
 		}
 	}
 }

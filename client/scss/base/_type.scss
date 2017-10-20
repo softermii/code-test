@@ -61,34 +61,33 @@ body {
 
 //// section-title
 .section-title {
+	margin: 0 0 40px;
 	text-align: center;
-	margin: 0 0 100px;
-
 	h1, h2 {
-		font-size: 50px;
-		font-weight: 400;
+		font-size: 32px;
 		line-height: 1.25;
+		font-weight: 400;
 		margin: 0 0 10px;
 	}
 	.sub-title {
-		font-size: 24px;
+		font-size: 20px;
+		max-width: 100%;
 		line-height: 1.5;
-  		font-weight: 300;
-  		max-width: 60%;
-  		margin: 0 auto;
-	} 
+	  	font-weight: 300;
+	  	margin: 0 auto;
+	}
 }
-@media screen and (max-width:$lgdesktopmq - 1) {
+@media screen and (min-width: $lgdesktopmq) {
 	.section-title {
-		margin: 0 0 40px;
+		margin: 0 0 100px;
+
 		h1, h2 {
-			font-size: 32px;
-  			line-height: 1.25;
+			font-size: 50px;
 		}
 		.sub-title {
-			font-size: 20px;
-			max-width: 100%;
-		}
+			font-size: 24px;
+	  		max-width: 60%;
+		} 
 	}
 }
 
@@ -207,8 +206,6 @@ ul, ol {list-style: none;padding:0;}
 .text-hide {
 	@include text-hide();
 }
-
-
 // Breaks
 hr {
 	border:0;

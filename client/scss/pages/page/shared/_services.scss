@@ -1,5 +1,9 @@
 .services {
-	padding: 100px 0;
+	padding: 40px 0;
+
+	[class^="col-"] + [class^="col-"] {
+		margin-top: 30px;
+	}
 
 	.item {
 		text-align: center;
@@ -12,7 +16,7 @@
 		}
 
 		.title {
-			font-size: 28px;
+			font-size: 24px;
 		  	font-weight: 500;
 		  	line-height: 1.5;
 		  	color: $darkgrey;
@@ -20,25 +24,28 @@
 		}
 
 		.desc {
-			font-size: 20px;
+			font-size: 18px;
   			font-weight: 300;
-  			line-height: 1.5; 
+  			line-height: 1.5;
+  			max-width: 400px;
+  			margin: 0 auto;
 		}
 	}
 }
-@media screen and (max-width:$lgdesktopmq - 1) {
+@media screen and (min-width: $desktopmq) {
 	.services {
-		padding: 40px 0;
+		padding: 100px 0;
+		[class^="col-"] + [class^="col-"] {
+			margin-top: 0;
+		}
 		.item {
 			.title {
-				font-size: 24px;
+				font-size: 28px;
 			}
 			.desc {
-				font-size: 18px;
+				font-size: 20px;
 			}
 		}
-		[class^="col-"] + [class^="col-"] {
-			margin-top: 30px;
-		}
+		
 	}
 }

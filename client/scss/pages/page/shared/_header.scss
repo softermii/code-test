@@ -1,88 +1,80 @@
 // header
 .header {
 	padding: 20px 0;
-
 	&__nav {
-		li + li {
-			margin-left: 30px;
-		}
-		a {
-			font-size: 18px;
-			line-height: 50px; 
-			color: $darkgrey;
-		}
-		li.active {
-			a {
-				display: block;
-				background: $primary;
-				color: #fff;
-				font-size: 16px;
-				line-height: 50px; 
-				padding: 0 32px; 
-				border-radius: 6px;
-			} 
-		}
-	} 
+		display: none;
+	}
 }
-@media screen and (max-width:$desktopmq - 1) {
+@media screen and (min-width: $desktopmq) {
 	.header {
 		&__nav {
-			display: none !important;
-		}
-		&__logo {
-			img {
-				height: 50px;
+			li + li {
+				margin-left: 30px;
 			}
-		}
+			a {
+				font-size: 18px;
+				line-height: 50px; 
+				color: $darkgrey;
+			}
+			li.active {
+				a {
+					display: block;
+					background: $primary;
+					color: #fff;
+					font-size: 16px;
+					line-height: 50px; 
+					padding: 0 32px; 
+					border-radius: 6px;
+				} 
+			}
+		} 
 	}
 }
 
 // mobile-nav
-@media screen and (min-width:$desktopmq) {
-	#nav-button, #mobile-nav {
-		display: none;
+#nav-button {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(/img/menu/menu-open.svg) no-repeat center center;
+	background-size: 32px;
+	cursor: pointer;
+
+	&.active {
+		background: url(/img/menu/menu-close.svg) no-repeat center center;
+		background-size: 32px;
 	}
 }
-@media screen and (max-width:$desktopmq - 1) {
-	#nav-button {
-		display: block;
-		width: 32px;
-		height: 32px;
-		background: url(/img/menu/menu-open.svg) no-repeat center center;
-		background-size: 32px;
-		cursor: pointer;
+#mobile-nav {
+	position: fixed;
+	top: 0;
+	right: -258px;
+	bottom: 0;
+	z-index: 1;
 
-		&.active {
-			background: url(/img/menu/menu-close.svg) no-repeat center center;
-			background-size: 32px;
+	padding: 30px;
+	width: 258px;
+	background: $secondary;
+
+	li {
+		a {
+			font-size: 18px;
+			line-height: 50px;
+			color: #fff;
+			display: block;
+			text-align: center;
+			border-radius: 6px;
 		}
 	}
-	#mobile-nav {
-		position: fixed;
-		top: 0;
-		right: -258px;
-		bottom: 0;
-		z-index: 1;
 
-		padding: 30px;
-		width: 258px;
-		background: $secondary;
-
-		li {
-			a {
-				font-size: 18px;
-				line-height: 50px;
-				color: #fff;
-				display: block;
-				text-align: center;
-				border-radius: 6px;
-			}
+	li.active {
+		a {
+			background: $primary;
 		}
-
-		li.active {
-			a {
-				background: $primary;
-			}
-		}
+	}
+}
+@media screen and (min-width: $desktopmq) {
+	#nav-button, #mobile-nav {
+		display: none;
 	}
 }

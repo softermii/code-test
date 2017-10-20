@@ -1,5 +1,5 @@
 .contact-form {
-	padding: 100px 0;
+	padding: 40px 0;
 
 	form {
 		width: 580px;
@@ -10,14 +10,18 @@
 			min-height: 162px;
 			resize: none;
 		}
+
+		.btn {
+			width: 100%;
+		}
 	}
 }
-@media screen and (max-width:$lgdesktopmq - 1) {
-	.home-contact {
-		padding: 40px 0;
+@media screen and (min-width: $lgdesktopmq) {
+	.contact-form {
+		padding: 100px 0;
 		form {
 			.btn {
-				width: 100%;
+				width: auto;
 			}
 		}
 	}

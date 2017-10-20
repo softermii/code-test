@@ -108,6 +108,7 @@ $form-input-range-contrast: 0%!default;
 //// Input wrapper
 .input-group {
 	margin: $form-input-group-margin;
+	margin: 0 0 20px;
 }
 input,
 textarea,
@@ -144,9 +145,9 @@ input:invalid, textarea:invalid{
     box-shadow: none;
 }
 
-@media screen and (max-width:$lgdesktopmq - 1) {
+@media screen and (min-width: $lgdesktopmq) {
 	.input-group {
-		margin: 0 0 20px;
+		margin: 0 0 30px;
 	}
 }
 
