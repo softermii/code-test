@@ -144,6 +144,12 @@ input:invalid, textarea:invalid{
     box-shadow: none;
 }
 
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.input-group {
+		margin: 0 0 20px;
+	}
+}
+
 
 // Input & Textarea
 input[type="text"],

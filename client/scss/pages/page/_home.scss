@@ -12,6 +12,11 @@
 		max-width: 100%;
 	}
 } 
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-intro {
+		padding-top: 20px;
+	}
+}
 
 // redline
 .home-redline {
@@ -25,7 +30,31 @@
 		line-height: 1.5;
 		padding-right: 30px;
 	}
-} 
+
+	.btn {
+		flex-shrink: 0; 
+	}
+}
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-redline {
+		text-align: center;
+		padding: 30px 0;
+
+		.text-box {
+			font-size: 24px;
+			margin: 0 0 20px;
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+}
+@media screen and (max-width:$tabletmq - 1) {
+	.home-redline {
+		.btn {
+			width: 100%;
+		}
+	}
+}
 
 // services
 .home-services {
@@ -46,12 +75,29 @@
 		  	font-weight: 500;
 		  	line-height: 1.5;
 		  	color: $darkgrey;
+		  	margin: 0 0 8px;
 		}
 
 		.desc {
 			font-size: 20px;
   			font-weight: 300;
   			line-height: 1.5; 
+		}
+	}
+}
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-services {
+		padding: 40px 0;
+		.item {
+			.title {
+				font-size: 24px;
+			}
+			.desc {
+				font-size: 18px;
+			}
+		}
+		[class^="col-"] + [class^="col-"] {
+			margin-top: 30px;
 		}
 	}
 }
@@ -92,6 +138,28 @@
   		line-height: 1.67;
 	}
 }
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-blockquote {
+		.outer {
+			padding: 30px 0;
+		}
+		.inner {
+			padding-left: 48px;
+
+			&::before {
+				width: 30px;
+				height: 20px;
+				background: url(../img/homepage/speach-marks.svg) no-repeat center center;
+				background-size: 30px;
+				left: 0;
+			}
+		}
+		.text {
+			font-size: 24px;
+			margin: 0 0 10px;
+		}
+	}
+}
 
 // contact
 .home-contact {
@@ -105,6 +173,16 @@
 		textarea {
 			min-height: 162px;
 			resize: none;
+		}
+	}
+}
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-contact {
+		padding: 40px 0;
+		form {
+			.btn {
+				width: 100%;
+			}
 		}
 	}
 }
