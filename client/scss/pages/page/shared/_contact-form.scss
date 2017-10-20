@@ -1,0 +1,24 @@
+.contact-form {
+	padding: 100px 0;
+
+	form {
+		width: 580px;
+		max-width: 100%;
+		margin: 0 auto;
+
+		textarea {
+			min-height: 162px;
+			resize: none;
+		}
+	}
+}
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.home-contact {
+		padding: 40px 0;
+		form {
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}

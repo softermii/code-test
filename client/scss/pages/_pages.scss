@@ -1,13 +1,24 @@
 /////////////////////////////////////////////////////////
-// Page level overides                                 //
+// shared                                              //
 /////////////////////////////////////////////////////////
 
 // header
-@import 'pages/page/header';
+@import 'pages/page/shared/header';
 
 // footer
-@import 'pages/page/footer'; 
+@import 'pages/page/shared/footer'; 
 
+// contact-form
+@import 'pages/page/shared/contact-form';
+
+// testimonials
+@import 'pages/page/shared/testimonials';
+
+// services
+@import 'pages/page/shared/services';
+
+/////////////////////////////////////////////////////////
+// pages                                               //
 /////////////////////////////////////////////////////////
 
 // Home

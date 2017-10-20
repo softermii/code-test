@@ -37,7 +37,7 @@
 	}
 }
 
-// nav-button
+// mobile-nav
 @media screen and (min-width:$desktopmq) {
 	#nav-button, #mobile-nav {
 		display: none;
@@ -48,12 +48,12 @@
 		display: block;
 		width: 32px;
 		height: 32px;
-		background: url(../img/menu/menu-open.svg) no-repeat center center;
+		background: url(/img/menu/menu-open.svg) no-repeat center center;
 		background-size: 32px;
 		cursor: pointer;
 
 		&.active {
-			background: url(../img/menu/menu-close.svg) no-repeat center center;
+			background: url(/img/menu/menu-close.svg) no-repeat center center;
 			background-size: 32px;
 		}
 	}

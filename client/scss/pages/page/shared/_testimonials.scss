@@ -1,0 +1,57 @@
+.testimonials {
+	.outer {
+		border-top: 2px solid #eee;
+		border-bottom: 2px solid #eee;
+		padding: 60px 0;
+	}
+	.inner {
+		position: relative;
+		padding-left: 186px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 50px;
+			height: 33px;
+			position: absolute;
+			top: 5px;
+			left: 90px;
+			background: url(/img/homepage/speach-marks.svg) no-repeat center center;
+		}
+	}
+
+	.text {
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 0 0 20px;
+		color: $darkgrey;
+	}
+
+	.from {
+		font-size: 18px;
+  		line-height: 1.67;
+	}
+}
+@media screen and (max-width:$lgdesktopmq - 1) {
+	.testimonials {
+		.outer {
+			padding: 30px 0;
+		}
+		.inner {
+			padding-left: 48px;
+
+			&::before {
+				width: 30px;
+				height: 20px;
+				background: url(/img/homepage/speach-marks.svg) no-repeat center center;
+				background-size: 30px;
+				left: 0;
+			}
+		}
+		.text {
+			font-size: 24px;
+			margin: 0 0 10px;
+		}
+	}
+}
